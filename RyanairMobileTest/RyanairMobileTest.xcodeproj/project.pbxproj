@@ -17,6 +17,9 @@
 		85D7482D249A384D004AE924 /* RyanairMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7482C249A384D004AE924 /* RyanairMobileTestUITests.swift */; };
 		85D74842249A887C004AE924 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74841249A887C004AE924 /* StationModel.swift */; };
 		85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74846249A8994004AE924 /* StationMarketModel.swift */; };
+		85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74849249A8D3A004AE924 /* TripModel.swift */; };
+		85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7484B249A8E63004AE924 /* TripFlightModel.swift */; };
+		85D7484F249AA607004AE924 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7484E249AA607004AE924 /* ConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		85D7482E249A384D004AE924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D74841249A887C004AE924 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		85D74846249A8994004AE924 /* StationMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMarketModel.swift; sourceTree = "<group>"; };
+		85D74849249A8D3A004AE924 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		85D7484B249A8E63004AE924 /* TripFlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFlightModel.swift; sourceTree = "<group>"; };
+		85D7484E249AA607004AE924 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		85D74809249A3849004AE924 /* RyanairMobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				85D7484D249AA5FD004AE924 /* Services */,
 				85D7483F249A886A004AE924 /* Models */,
 				85D7483A249A8744004AE924 /* Application */,
 				85D7483D249A879E004AE924 /* Controllers */,
@@ -176,6 +183,7 @@
 		85D7483F249A886A004AE924 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				85D74848249A8D26004AE924 /* Trip */,
 				85D74840249A886F004AE924 /* Station */,
 			);
 			path = Models;
@@ -188,6 +196,23 @@
 				85D74846249A8994004AE924 /* StationMarketModel.swift */,
 			);
 			path = Station;
+			sourceTree = "<group>";
+		};
+		85D74848249A8D26004AE924 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				85D74849249A8D3A004AE924 /* TripModel.swift */,
+				85D7484B249A8E63004AE924 /* TripFlightModel.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		85D7484D249AA5FD004AE924 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85D7484E249AA607004AE924 /* ConnectionManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */,
 				85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */,
 				85D74842249A887C004AE924 /* StationModel.swift in Sources */,
+				85D7484F249AA607004AE924 /* ConnectionManager.swift in Sources */,
+				85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */,
 				85D7480F249A3849004AE924 /* ViewController.swift in Sources */,
 				85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */,
 				85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */,
