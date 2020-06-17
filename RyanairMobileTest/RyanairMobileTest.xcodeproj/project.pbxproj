@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480A249A3849004AE924 /* AppDelegate.swift */; };
+		85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480C249A3849004AE924 /* SceneDelegate.swift */; };
+		85D7480F249A3849004AE924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480E249A3849004AE924 /* ViewController.swift */; };
+		85D74812249A3849004AE924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D74810249A3849004AE924 /* Main.storyboard */; };
+		85D74814249A384D004AE924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D74813249A384D004AE924 /* Assets.xcassets */; };
+		85D74817249A384D004AE924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D74815249A384D004AE924 /* LaunchScreen.storyboard */; };
+		85D74822249A384D004AE924 /* RyanairMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74821249A384D004AE924 /* RyanairMobileTestTests.swift */; };
+		85D7482D249A384D004AE924 /* RyanairMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7482C249A384D004AE924 /* RyanairMobileTestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85D7481E249A384D004AE924 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85D747FF249A3849004AE924 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85D74806249A3849004AE924;
+			remoteInfo = RyanairMobileTest;
+		};
+		85D74829249A384D004AE924 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85D747FF249A3849004AE924 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85D74806249A3849004AE924;
+			remoteInfo = RyanairMobileTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85D74807249A3849004AE924 /* RyanairMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanairMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D7480A249A3849004AE924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85D7480C249A3849004AE924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		85D7480E249A3849004AE924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85D74811249A3849004AE924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85D74813249A384D004AE924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85D74816249A384D004AE924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85D74818249A384D004AE924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D7481D249A384D004AE924 /* RyanairMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanairMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D74821249A384D004AE924 /* RyanairMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMobileTestTests.swift; sourceTree = "<group>"; };
+		85D74823249A384D004AE924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D74828249A384D004AE924 /* RyanairMobileTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanairMobileTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D7482C249A384D004AE924 /* RyanairMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMobileTestUITests.swift; sourceTree = "<group>"; };
+		85D7482E249A384D004AE924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85D74804249A3849004AE924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D7481A249A384D004AE924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D74825249A384D004AE924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85D747FE249A3849004AE924 = {
+			isa = PBXGroup;
+			children = (
+				85D74809249A3849004AE924 /* RyanairMobileTest */,
+				85D74820249A384D004AE924 /* RyanairMobileTestTests */,
+				85D7482B249A384D004AE924 /* RyanairMobileTestUITests */,
+				85D74808249A3849004AE924 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85D74808249A3849004AE924 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85D74807249A3849004AE924 /* RyanairMobileTest.app */,
+				85D7481D249A384D004AE924 /* RyanairMobileTestTests.xctest */,
+				85D74828249A384D004AE924 /* RyanairMobileTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85D74809249A3849004AE924 /* RyanairMobileTest */ = {
+			isa = PBXGroup;
+			children = (
+				85D7480A249A3849004AE924 /* AppDelegate.swift */,
+				85D7480C249A3849004AE924 /* SceneDelegate.swift */,
+				85D7480E249A3849004AE924 /* ViewController.swift */,
+				85D74810249A3849004AE924 /* Main.storyboard */,
+				85D74813249A384D004AE924 /* Assets.xcassets */,
+				85D74815249A384D004AE924 /* LaunchScreen.storyboard */,
+				85D74818249A384D004AE924 /* Info.plist */,
+			);
+			path = RyanairMobileTest;
+			sourceTree = "<group>";
+		};
+		85D74820249A384D004AE924 /* RyanairMobileTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				85D74821249A384D004AE924 /* RyanairMobileTestTests.swift */,
+				85D74823249A384D004AE924 /* Info.plist */,
+			);
+			path = RyanairMobileTestTests;
+			sourceTree = "<group>";
+		};
+		85D7482B249A384D004AE924 /* RyanairMobileTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85D7482C249A384D004AE924 /* RyanairMobileTestUITests.swift */,
+				85D7482E249A384D004AE924 /* Info.plist */,
+			);
+			path = RyanairMobileTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85D74806249A3849004AE924 /* RyanairMobileTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D74831249A384D004AE924 /* Build configuration list for PBXNativeTarget "RyanairMobileTest" */;
+			buildPhases = (
+				85D74803249A3849004AE924 /* Sources */,
+				85D74804249A3849004AE924 /* Frameworks */,
+				85D74805249A3849004AE924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RyanairMobileTest;
+			productName = RyanairMobileTest;
+			productReference = 85D74807249A3849004AE924 /* RyanairMobileTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85D7481C249A384D004AE924 /* RyanairMobileTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D74834249A384D004AE924 /* Build configuration list for PBXNativeTarget "RyanairMobileTestTests" */;
+			buildPhases = (
+				85D74819249A384D004AE924 /* Sources */,
+				85D7481A249A384D004AE924 /* Frameworks */,
+				85D7481B249A384D004AE924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85D7481F249A384D004AE924 /* PBXTargetDependency */,
+			);
+			name = RyanairMobileTestTests;
+			productName = RyanairMobileTestTests;
+			productReference = 85D7481D249A384D004AE924 /* RyanairMobileTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85D74827249A384D004AE924 /* RyanairMobileTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D74837249A384D004AE924 /* Build configuration list for PBXNativeTarget "RyanairMobileTestUITests" */;
+			buildPhases = (
+				85D74824249A384D004AE924 /* Sources */,
+				85D74825249A384D004AE924 /* Frameworks */,
+				85D74826249A384D004AE924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85D7482A249A384D004AE924 /* PBXTargetDependency */,
+			);
+			name = RyanairMobileTestUITests;
+			productName = RyanairMobileTestUITests;
+			productReference = 85D74828249A384D004AE924 /* RyanairMobileTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85D747FF249A3849004AE924 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Jorge Sainz Sueiro";
+				TargetAttributes = {
+					85D74806249A3849004AE924 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					85D7481C249A384D004AE924 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 85D74806249A3849004AE924;
+					};
+					85D74827249A384D004AE924 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 85D74806249A3849004AE924;
+					};
+				};
+			};
+			buildConfigurationList = 85D74802249A3849004AE924 /* Build configuration list for PBXProject "RyanairMobileTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85D747FE249A3849004AE924;
+			productRefGroup = 85D74808249A3849004AE924 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85D74806249A3849004AE924 /* RyanairMobileTest */,
+				85D7481C249A384D004AE924 /* RyanairMobileTestTests */,
+				85D74827249A384D004AE924 /* RyanairMobileTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85D74805249A3849004AE924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D74817249A384D004AE924 /* LaunchScreen.storyboard in Resources */,
+				85D74814249A384D004AE924 /* Assets.xcassets in Resources */,
+				85D74812249A3849004AE924 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D7481B249A384D004AE924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D74826249A384D004AE924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85D74803249A3849004AE924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D7480F249A3849004AE924 /* ViewController.swift in Sources */,
+				85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */,
+				85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D74819249A384D004AE924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D74822249A384D004AE924 /* RyanairMobileTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D74824249A384D004AE924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D7482D249A384D004AE924 /* RyanairMobileTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85D7481F249A384D004AE924 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85D74806249A3849004AE924 /* RyanairMobileTest */;
+			targetProxy = 85D7481E249A384D004AE924 /* PBXContainerItemProxy */;
+		};
+		85D7482A249A384D004AE924 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85D74806249A3849004AE924 /* RyanairMobileTest */;
+			targetProxy = 85D74829249A384D004AE924 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85D74810249A3849004AE924 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85D74811249A3849004AE924 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85D74815249A384D004AE924 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85D74816249A384D004AE924 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85D7482F249A384D004AE924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85D74830249A384D004AE924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85D74832249A384D004AE924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3ZFTZJH4C;
+				INFOPLIST_FILE = RyanairMobileTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85D74833249A384D004AE924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3ZFTZJH4C;
+				INFOPLIST_FILE = RyanairMobileTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85D74835249A384D004AE924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3ZFTZJH4C;
+				INFOPLIST_FILE = RyanairMobileTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanairMobileTest.app/RyanairMobileTest";
+			};
+			name = Debug;
+		};
+		85D74836249A384D004AE924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3ZFTZJH4C;
+				INFOPLIST_FILE = RyanairMobileTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanairMobileTest.app/RyanairMobileTest";
+			};
+			name = Release;
+		};
+		85D74838249A384D004AE924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3ZFTZJH4C;
+				INFOPLIST_FILE = RyanairMobileTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RyanairMobileTest;
+			};
+			name = Debug;
+		};
+		85D74839249A384D004AE924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3ZFTZJH4C;
+				INFOPLIST_FILE = RyanairMobileTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RyanairMobileTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85D74802249A3849004AE924 /* Build configuration list for PBXProject "RyanairMobileTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D7482F249A384D004AE924 /* Debug */,
+				85D74830249A384D004AE924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85D74831249A384D004AE924 /* Build configuration list for PBXNativeTarget "RyanairMobileTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D74832249A384D004AE924 /* Debug */,
+				85D74833249A384D004AE924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85D74834249A384D004AE924 /* Build configuration list for PBXNativeTarget "RyanairMobileTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D74835249A384D004AE924 /* Debug */,
+				85D74836249A384D004AE924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85D74837249A384D004AE924 /* Build configuration list for PBXNativeTarget "RyanairMobileTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D74838249A384D004AE924 /* Debug */,
+				85D74839249A384D004AE924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85D747FF249A3849004AE924 /* Project object */;
+}
