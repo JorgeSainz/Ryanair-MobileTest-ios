@@ -15,6 +15,8 @@
 		85D74817249A384D004AE924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D74815249A384D004AE924 /* LaunchScreen.storyboard */; };
 		85D74822249A384D004AE924 /* RyanairMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74821249A384D004AE924 /* RyanairMobileTestTests.swift */; };
 		85D7482D249A384D004AE924 /* RyanairMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7482C249A384D004AE924 /* RyanairMobileTestUITests.swift */; };
+		85D74842249A887C004AE924 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74841249A887C004AE924 /* StationModel.swift */; };
+		85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74846249A8994004AE924 /* StationMarketModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		85D74828249A384D004AE924 /* RyanairMobileTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanairMobileTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7482C249A384D004AE924 /* RyanairMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMobileTestUITests.swift; sourceTree = "<group>"; };
 		85D7482E249A384D004AE924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D74841249A887C004AE924 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		85D74846249A8994004AE924 /* StationMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMarketModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,11 @@
 		85D74809249A3849004AE924 /* RyanairMobileTest */ = {
 			isa = PBXGroup;
 			children = (
-				85D7480A249A3849004AE924 /* AppDelegate.swift */,
-				85D7480C249A3849004AE924 /* SceneDelegate.swift */,
-				85D7480E249A3849004AE924 /* ViewController.swift */,
-				85D74810249A3849004AE924 /* Main.storyboard */,
-				85D74813249A384D004AE924 /* Assets.xcassets */,
-				85D74815249A384D004AE924 /* LaunchScreen.storyboard */,
-				85D74818249A384D004AE924 /* Info.plist */,
+				85D7483F249A886A004AE924 /* Models */,
+				85D7483A249A8744004AE924 /* Application */,
+				85D7483D249A879E004AE924 /* Controllers */,
+				85D7483C249A878A004AE924 /* Resources */,
+				85D7483B249A876D004AE924 /* Storyboards */,
 			);
 			path = RyanairMobileTest;
 			sourceTree = "<group>";
@@ -126,6 +128,66 @@
 				85D7482E249A384D004AE924 /* Info.plist */,
 			);
 			path = RyanairMobileTestUITests;
+			sourceTree = "<group>";
+		};
+		85D7483A249A8744004AE924 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				85D7480A249A3849004AE924 /* AppDelegate.swift */,
+				85D7480C249A3849004AE924 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		85D7483B249A876D004AE924 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85D74810249A3849004AE924 /* Main.storyboard */,
+				85D74815249A384D004AE924 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		85D7483C249A878A004AE924 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85D74813249A384D004AE924 /* Assets.xcassets */,
+				85D74818249A384D004AE924 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		85D7483D249A879E004AE924 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85D7483E249A87FF004AE924 /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85D7483E249A87FF004AE924 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				85D7480E249A3849004AE924 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		85D7483F249A886A004AE924 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85D74840249A886F004AE924 /* Station */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85D74840249A886F004AE924 /* Station */ = {
+			isa = PBXGroup;
+			children = (
+				85D74841249A887C004AE924 /* StationModel.swift */,
+				85D74846249A8994004AE924 /* StationMarketModel.swift */,
+			);
+			path = Station;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */,
+				85D74842249A887C004AE924 /* StationModel.swift in Sources */,
 				85D7480F249A3849004AE924 /* ViewController.swift in Sources */,
 				85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */,
 				85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */,
@@ -436,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3ZFTZJH4C;
-				INFOPLIST_FILE = RyanairMobileTest/Info.plist;
+				INFOPLIST_FILE = RyanairMobileTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -454,7 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3ZFTZJH4C;
-				INFOPLIST_FILE = RyanairMobileTest/Info.plist;
+				INFOPLIST_FILE = RyanairMobileTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesainz.RyanairMobileTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
