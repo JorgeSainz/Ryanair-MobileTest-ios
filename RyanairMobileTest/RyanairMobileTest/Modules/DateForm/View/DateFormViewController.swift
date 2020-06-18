@@ -45,7 +45,6 @@ class DateFormViewController: UIViewController {
     }
     
     @objc func selectDate(){
-        print("DATE SELECTED")
         navigationController?.popViewController(animated: true)
     }
 

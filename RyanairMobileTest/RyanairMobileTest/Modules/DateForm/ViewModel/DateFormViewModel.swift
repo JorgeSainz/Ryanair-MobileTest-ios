@@ -10,6 +10,8 @@ import Foundation
 
 class DateFormViewModel {
     
+    //MARK:- TODO - DONT ALLOW TO SELECT DATE PREVIOUS FROM TODAY
+    
     var selectedDate: Date?
     let MAX_MONTHS: Int = 24
     

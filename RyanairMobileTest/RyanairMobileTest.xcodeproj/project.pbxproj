@@ -34,6 +34,11 @@
 		85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74849249A8D3A004AE924 /* TripModel.swift */; };
 		85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7484B249A8E63004AE924 /* TripFlightModel.swift */; };
 		85D7484F249AA607004AE924 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7484E249AA607004AE924 /* ConnectionManager.swift */; };
+		85E9869C249BF77100018363 /* PassengersFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9869B249BF77100018363 /* PassengersFormViewController.swift */; };
+		85E9869E249BF78000018363 /* PassengersFormLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9869D249BF78000018363 /* PassengersFormLayout.swift */; };
+		85E986A0249BF7A300018363 /* PassengersFormTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E9869F249BF7A300018363 /* PassengersFormTableview.swift */; };
+		85E986A2249BF90A00018363 /* PassengerSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E986A1249BF90A00018363 /* PassengerSelectorCell.swift */; };
+		85E986A4249BFB4D00018363 /* PassengerNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E986A3249BFB4D00018363 /* PassengerNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,11 @@
 		85D74849249A8D3A004AE924 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		85D7484B249A8E63004AE924 /* TripFlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFlightModel.swift; sourceTree = "<group>"; };
 		85D7484E249AA607004AE924 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		85E9869B249BF77100018363 /* PassengersFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersFormViewController.swift; sourceTree = "<group>"; };
+		85E9869D249BF78000018363 /* PassengersFormLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersFormLayout.swift; sourceTree = "<group>"; };
+		85E9869F249BF7A300018363 /* PassengersFormTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersFormTableview.swift; sourceTree = "<group>"; };
+		85E986A1249BF90A00018363 /* PassengerSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerSelectorCell.swift; sourceTree = "<group>"; };
+		85E986A3249BFB4D00018363 /* PassengerNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +166,7 @@
 				85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */,
 				85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */,
 				85C9029E249BD57C004F047B /* CalendarCell.swift */,
+				85E986A1249BF90A00018363 /* PassengerSelectorCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -163,7 +174,6 @@
 		85A1DDE3249B87C800F4712B /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				85A1DDE4249B87D700F4712B /* FormField.swift */,
 				857A1B09249B93CB0039559A /* PrimaryButton.swift */,
 			);
 			path = Buttons;
@@ -199,7 +209,9 @@
 		85C902A5249BE68A004F047B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				85A1DDE4249B87D700F4712B /* FormField.swift */,
 				85C902A6249BE694004F047B /* DateHeader.swift */,
+				85E986A3249BFB4D00018363 /* PassengerNumberView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +299,7 @@
 		85D7483D249A879E004AE924 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				85E98699249BF75700018363 /* PassengersForm */,
 				85C90296249BCC84004F047B /* DateForm */,
 				85D7483E249A87FF004AE924 /* FlightForm */,
 			);
@@ -335,6 +348,24 @@
 				85D7484E249AA607004AE924 /* ConnectionManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		85E98699249BF75700018363 /* PassengersForm */ = {
+			isa = PBXGroup;
+			children = (
+				85E9869A249BF76400018363 /* View */,
+			);
+			path = PassengersForm;
+			sourceTree = "<group>";
+		};
+		85E9869A249BF76400018363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85E9869B249BF77100018363 /* PassengersFormViewController.swift */,
+				85E9869D249BF78000018363 /* PassengersFormLayout.swift */,
+				85E9869F249BF7A300018363 /* PassengersFormTableview.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,11 +507,16 @@
 				85A1DDE2249B842400F4712B /* FlightDestinationsCell.swift in Sources */,
 				85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */,
 				85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */,
+				85E986A0249BF7A300018363 /* PassengersFormTableview.swift in Sources */,
 				857A1B0A249B93CB0039559A /* PrimaryButton.swift in Sources */,
 				85D74842249A887C004AE924 /* StationModel.swift in Sources */,
+				85E986A2249BF90A00018363 /* PassengerSelectorCell.swift in Sources */,
+				85E986A4249BFB4D00018363 /* PassengerNumberView.swift in Sources */,
+				85E9869E249BF78000018363 /* PassengersFormLayout.swift in Sources */,
 				85D7484F249AA607004AE924 /* ConnectionManager.swift in Sources */,
 				85C90298249BCC98004F047B /* DateFormViewController.swift in Sources */,
 				85C9029F249BD57C004F047B /* CalendarCell.swift in Sources */,
+				85E9869C249BF77100018363 /* PassengersFormViewController.swift in Sources */,
 				85A1DDE5249B87D700F4712B /* FormField.swift in Sources */,
 				85A1DDE7249B8E8900F4712B /* FlightDefaultFormCell.swift in Sources */,
 				85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */,

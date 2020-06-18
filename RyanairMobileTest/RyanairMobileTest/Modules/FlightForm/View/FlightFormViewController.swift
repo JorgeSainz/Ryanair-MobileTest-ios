@@ -92,6 +92,8 @@ class FlightFormViewController: UIViewController {
     
     @objc func getPassengers(){
         print("Passengers")
+        let passengerSelectionModule = PassengersFormViewController()
+        navigationController?.pushViewController(passengerSelectionModule, animated: true)
     }
 
 
