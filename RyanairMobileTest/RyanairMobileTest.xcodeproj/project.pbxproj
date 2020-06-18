@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		857A1B0A249B93CB0039559A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A1B09249B93CB0039559A /* PrimaryButton.swift */; };
+		857A1B0E249BC2AE0039559A /* FlightFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A1B0D249BC2AE0039559A /* FlightFormViewModel.swift */; };
+		858BEA27249AC2DE005DD06F /* FlightFormLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BEA26249AC2DE005DD06F /* FlightFormLayout.swift */; };
+		85A1DDDE249B814600F4712B /* FlightFormTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDDD249B814600F4712B /* FlightFormTable.swift */; };
+		85A1DDE2249B842400F4712B /* FlightDestinationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */; };
+		85A1DDE5249B87D700F4712B /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDE4249B87D700F4712B /* FormField.swift */; };
+		85A1DDE7249B8E8900F4712B /* FlightDefaultFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */; };
 		85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480A249A3849004AE924 /* AppDelegate.swift */; };
 		85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480C249A3849004AE924 /* SceneDelegate.swift */; };
-		85D7480F249A3849004AE924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480E249A3849004AE924 /* ViewController.swift */; };
+		85D7480F249A3849004AE924 /* FlightFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480E249A3849004AE924 /* FlightFormViewController.swift */; };
 		85D74812249A3849004AE924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D74810249A3849004AE924 /* Main.storyboard */; };
 		85D74814249A384D004AE924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D74813249A384D004AE924 /* Assets.xcassets */; };
 		85D74817249A384D004AE924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D74815249A384D004AE924 /* LaunchScreen.storyboard */; };
@@ -40,10 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		857A1B09249B93CB0039559A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		857A1B0D249BC2AE0039559A /* FlightFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFormViewModel.swift; sourceTree = "<group>"; };
+		858BEA26249AC2DE005DD06F /* FlightFormLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFormLayout.swift; sourceTree = "<group>"; };
+		85A1DDDD249B814600F4712B /* FlightFormTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFormTable.swift; sourceTree = "<group>"; };
+		85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDestinationsCell.swift; sourceTree = "<group>"; };
+		85A1DDE4249B87D700F4712B /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDefaultFormCell.swift; sourceTree = "<group>"; };
 		85D74807249A3849004AE924 /* RyanairMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanairMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7480A249A3849004AE924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D7480C249A3849004AE924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85D7480E249A3849004AE924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85D7480E249A3849004AE924 /* FlightFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFormViewController.swift; sourceTree = "<group>"; };
 		85D74811249A3849004AE924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85D74813249A384D004AE924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D74816249A384D004AE924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +100,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		857A1B0B249BC28B0039559A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85D7480E249A3849004AE924 /* FlightFormViewController.swift */,
+				858BEA26249AC2DE005DD06F /* FlightFormLayout.swift */,
+				85A1DDDD249B814600F4712B /* FlightFormTable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		857A1B0C249BC2960039559A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				857A1B0D249BC2AE0039559A /* FlightFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		858BEA28249AC398005DD06F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85A1DDDF249B838400F4712B /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				85A1DDE3249B87C800F4712B /* Buttons */,
+				85A1DDE0249B839100F4712B /* Cells */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		85A1DDE0249B839100F4712B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */,
+				85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		85A1DDE3249B87C800F4712B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				85A1DDE4249B87D700F4712B /* FormField.swift */,
+				857A1B09249B93CB0039559A /* PrimaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		85D747FE249A3849004AE924 = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +178,7 @@
 				85D7484D249AA5FD004AE924 /* Services */,
 				85D7483F249A886A004AE924 /* Models */,
 				85D7483A249A8744004AE924 /* Application */,
-				85D7483D249A879E004AE924 /* Controllers */,
+				85D7483D249A879E004AE924 /* Modules */,
 				85D7483C249A878A004AE924 /* Resources */,
 				85D7483B249A876D004AE924 /* Storyboards */,
 			);
@@ -158,26 +224,29 @@
 		85D7483C249A878A004AE924 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85A1DDDF249B838400F4712B /* UserInterface */,
+				858BEA28249AC398005DD06F /* Extensions */,
 				85D74813249A384D004AE924 /* Assets.xcassets */,
 				85D74818249A384D004AE924 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		85D7483D249A879E004AE924 /* Controllers */ = {
+		85D7483D249A879E004AE924 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				85D7483E249A87FF004AE924 /* Main */,
+				85D7483E249A87FF004AE924 /* FlightForm */,
 			);
-			path = Controllers;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		85D7483E249A87FF004AE924 /* Main */ = {
+		85D7483E249A87FF004AE924 /* FlightForm */ = {
 			isa = PBXGroup;
 			children = (
-				85D7480E249A3849004AE924 /* ViewController.swift */,
+				857A1B0C249BC2960039559A /* ViewModel */,
+				857A1B0B249BC28B0039559A /* View */,
 			);
-			path = Main;
+			path = FlightForm;
 			sourceTree = "<group>";
 		};
 		85D7483F249A886A004AE924 /* Models */ = {
@@ -346,14 +415,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A1DDDE249B814600F4712B /* FlightFormTable.swift in Sources */,
+				857A1B0E249BC2AE0039559A /* FlightFormViewModel.swift in Sources */,
+				85A1DDE2249B842400F4712B /* FlightDestinationsCell.swift in Sources */,
 				85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */,
 				85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */,
+				857A1B0A249B93CB0039559A /* PrimaryButton.swift in Sources */,
 				85D74842249A887C004AE924 /* StationModel.swift in Sources */,
 				85D7484F249AA607004AE924 /* ConnectionManager.swift in Sources */,
+				85A1DDE5249B87D700F4712B /* FormField.swift in Sources */,
+				85A1DDE7249B8E8900F4712B /* FlightDefaultFormCell.swift in Sources */,
 				85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */,
-				85D7480F249A3849004AE924 /* ViewController.swift in Sources */,
+				85D7480F249A3849004AE924 /* FlightFormViewController.swift in Sources */,
 				85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */,
 				85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */,
+				858BEA27249AC2DE005DD06F /* FlightFormLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

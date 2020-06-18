@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FlightFormViewController: UIViewController {
     
     let connection = ConnectionManager()
 
