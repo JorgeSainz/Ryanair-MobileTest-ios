@@ -14,6 +14,13 @@
 		85A1DDE2249B842400F4712B /* FlightDestinationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */; };
 		85A1DDE5249B87D700F4712B /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDE4249B87D700F4712B /* FormField.swift */; };
 		85A1DDE7249B8E8900F4712B /* FlightDefaultFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */; };
+		85C90298249BCC98004F047B /* DateFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C90297249BCC98004F047B /* DateFormViewController.swift */; };
+		85C9029B249BCCC7004F047B /* DateFormTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9029A249BCCC7004F047B /* DateFormTable.swift */; };
+		85C9029D249BCCF5004F047B /* DateFormLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9029C249BCCF5004F047B /* DateFormLayout.swift */; };
+		85C9029F249BD57C004F047B /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9029E249BD57C004F047B /* CalendarCell.swift */; };
+		85C902A2249BDF0D004F047B /* DateFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C902A1249BDF0D004F047B /* DateFormViewModel.swift */; };
+		85C902A4249BE619004F047B /* Date+GetDateFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C902A3249BE619004F047B /* Date+GetDateFrom.swift */; };
+		85C902A7249BE694004F047B /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C902A6249BE694004F047B /* DateHeader.swift */; };
 		85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480A249A3849004AE924 /* AppDelegate.swift */; };
 		85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480C249A3849004AE924 /* SceneDelegate.swift */; };
 		85D7480F249A3849004AE924 /* FlightFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7480E249A3849004AE924 /* FlightFormViewController.swift */; };
@@ -54,6 +61,13 @@
 		85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDestinationsCell.swift; sourceTree = "<group>"; };
 		85A1DDE4249B87D700F4712B /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDefaultFormCell.swift; sourceTree = "<group>"; };
+		85C90297249BCC98004F047B /* DateFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormViewController.swift; sourceTree = "<group>"; };
+		85C9029A249BCCC7004F047B /* DateFormTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormTable.swift; sourceTree = "<group>"; };
+		85C9029C249BCCF5004F047B /* DateFormLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormLayout.swift; sourceTree = "<group>"; };
+		85C9029E249BD57C004F047B /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		85C902A1249BDF0D004F047B /* DateFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormViewModel.swift; sourceTree = "<group>"; };
+		85C902A3249BE619004F047B /* Date+GetDateFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+GetDateFrom.swift"; sourceTree = "<group>"; };
+		85C902A6249BE694004F047B /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 		85D74807249A3849004AE924 /* RyanairMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanairMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7480A249A3849004AE924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D7480C249A3849004AE924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +135,7 @@
 		858BEA28249AC398005DD06F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				85C902A3249BE619004F047B /* Date+GetDateFrom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -128,6 +143,7 @@
 		85A1DDDF249B838400F4712B /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				85C902A5249BE68A004F047B /* Views */,
 				85A1DDE3249B87C800F4712B /* Buttons */,
 				85A1DDE0249B839100F4712B /* Cells */,
 			);
@@ -139,6 +155,7 @@
 			children = (
 				85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */,
 				85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */,
+				85C9029E249BD57C004F047B /* CalendarCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -150,6 +167,41 @@
 				857A1B09249B93CB0039559A /* PrimaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		85C90296249BCC84004F047B /* DateForm */ = {
+			isa = PBXGroup;
+			children = (
+				85C902A0249BDEFF004F047B /* ViewModel */,
+				85C90299249BCC9C004F047B /* View */,
+			);
+			path = DateForm;
+			sourceTree = "<group>";
+		};
+		85C90299249BCC9C004F047B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85C90297249BCC98004F047B /* DateFormViewController.swift */,
+				85C9029A249BCCC7004F047B /* DateFormTable.swift */,
+				85C9029C249BCCF5004F047B /* DateFormLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85C902A0249BDEFF004F047B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				85C902A1249BDF0D004F047B /* DateFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		85C902A5249BE68A004F047B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85C902A6249BE694004F047B /* DateHeader.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		85D747FE249A3849004AE924 = {
@@ -235,6 +287,7 @@
 		85D7483D249A879E004AE924 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				85C90296249BCC84004F047B /* DateForm */,
 				85D7483E249A87FF004AE924 /* FlightForm */,
 			);
 			path = Modules;
@@ -415,20 +468,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C902A2249BDF0D004F047B /* DateFormViewModel.swift in Sources */,
 				85A1DDDE249B814600F4712B /* FlightFormTable.swift in Sources */,
+				85C9029D249BCCF5004F047B /* DateFormLayout.swift in Sources */,
 				857A1B0E249BC2AE0039559A /* FlightFormViewModel.swift in Sources */,
+				85C902A4249BE619004F047B /* Date+GetDateFrom.swift in Sources */,
 				85A1DDE2249B842400F4712B /* FlightDestinationsCell.swift in Sources */,
 				85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */,
 				85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */,
 				857A1B0A249B93CB0039559A /* PrimaryButton.swift in Sources */,
 				85D74842249A887C004AE924 /* StationModel.swift in Sources */,
 				85D7484F249AA607004AE924 /* ConnectionManager.swift in Sources */,
+				85C90298249BCC98004F047B /* DateFormViewController.swift in Sources */,
+				85C9029F249BD57C004F047B /* CalendarCell.swift in Sources */,
 				85A1DDE5249B87D700F4712B /* FormField.swift in Sources */,
 				85A1DDE7249B8E8900F4712B /* FlightDefaultFormCell.swift in Sources */,
 				85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */,
 				85D7480F249A3849004AE924 /* FlightFormViewController.swift in Sources */,
+				85C9029B249BCCC7004F047B /* DateFormTable.swift in Sources */,
 				85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */,
 				85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */,
+				85C902A7249BE694004F047B /* DateHeader.swift in Sources */,
 				858BEA27249AC2DE005DD06F /* FlightFormLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

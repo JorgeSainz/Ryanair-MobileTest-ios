@@ -10,6 +10,12 @@ import UIKit
 
 class PrimaryButton: UIButton {
     
+    override var isEnabled: Bool {
+        willSet(newValue) {
+            alpha = newValue ? 1 : 0.5
+        }
+    }
+    
     init(type: UIButton.ButtonType) {
         super.init(frame: .zero)
         backgroundColor = UIColor(red: 0.92, green: 0.79, blue: 0.33, alpha: 1.00)

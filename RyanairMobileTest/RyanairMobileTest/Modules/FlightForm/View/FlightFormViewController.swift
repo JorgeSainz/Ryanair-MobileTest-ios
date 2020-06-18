@@ -86,6 +86,8 @@ class FlightFormViewController: UIViewController {
     
     @objc func getDepartureDate(){
         print("DepartureDate")
+        let dateSelectionModule = DateFormViewController()
+        navigationController?.pushViewController(dateSelectionModule, animated: true)
     }
     
     @objc func getPassengers(){
