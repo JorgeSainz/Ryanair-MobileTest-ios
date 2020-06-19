@@ -25,6 +25,7 @@ extension PassengersFormViewController {
         navigationController?.navigationBar.layer.shadowOpacity = 1
         navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 3)
         navigationController?.navigationBar.layer.shadowRadius = 0
+        navigationItem.leftBarButtonItem = UIBarButtonItem()
         view.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
     }
     

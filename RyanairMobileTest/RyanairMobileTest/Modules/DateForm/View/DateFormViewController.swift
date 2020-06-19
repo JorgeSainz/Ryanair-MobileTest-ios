@@ -10,7 +10,7 @@ import UIKit
 
 class DateFormViewController: UIViewController {
     
-    let viewModel = DateFormViewModel()
+    let viewmodel = DateFormViewModel()
     
     lazy var formTable: UITableView = {
         let table = UITableView()
@@ -41,13 +41,13 @@ class DateFormViewController: UIViewController {
     //MARK:- UI ACTIONS
     func refreshView(){
         formTable.reloadData()
-        searchButton.isEnabled = viewModel.selectedDate != nil
+        searchButton.isEnabled = viewmodel.selectedDate != nil
     }
     
     @objc func selectDate(){
-        navigationController?.popViewController(animated: true)
+        viewmodel.updateDepartureDate { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
     }
-
-
 }
 

@@ -8,10 +8,17 @@
 
 import UIKit
 
+enum CalendarCellStatus {
+    case today, invalid, valid
+}
+
 class CalendarCell: UITableViewCell {
     
+    //MARK:- VARIABLES
     let cellDate: Date
-    override var isSelected: Bool { didSet(newValue) { setSelection(to: newValue)} }
+    var status: CalendarCellStatus
+    override var isSelected: Bool { didSet(newValue) { setActive(isActive: newValue)} }
+    
     //MARK:- OUTLETS
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
@@ -36,29 +43,22 @@ class CalendarCell: UITableViewCell {
     
     //MARK:- INIT
     init(day: Int, month: Int, year: Int) {
-        self.cellDate = Date.getDateFrom(day: day, month: month, year: year)
-        super.init(style: .default, reuseIdentifier: "FlightDestinationCell")
-        selectionStyle = .none
+        cellDate = Date.getDateFrom(day: day, month: month, year: year)
+        status = cellDate < Date() ? .invalid : .valid
+        if Calendar.current.isDateInToday(cellDate) { status = .today}
+
+        super.init(style: .default, reuseIdentifier: "CalendarCell")
         setUpLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func getStringFromDate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd - EEEE"
-        return dateFormatter.string(from: self.cellDate).capitalized
-    }
-    
-    private func setSelection(to status: Bool){
-        backgroundColor = status ? UIColor(red: 0.92, green: 0.79, blue: 0.33, alpha: 1.00) : .clear
-    }
+
+
     //MARK:- LAYOUT
     private func setUpLayout(){
         selectionStyle = .none
-        backgroundColor = .clear
         setUpStack()
     }
     
@@ -68,6 +68,23 @@ class CalendarCell: UITableViewCell {
         hStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
         hStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         hStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+    }
+    
+    private func configureCell(){
+        if status == .today { backgroundColor = UIColor(red: 0.87, green: 0.90, blue: 0.91, alpha: 1.00) }
+        if status == .invalid { dateLabel.textColor = UIColor(red: 0.70, green: 0.75, blue: 0.76, alpha: 1.00) }
+    }
+    
+    //MARK:- AUX FUNCTIONS
+    private func getStringFromDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd - EEEE"
+        return dateFormatter.string(from: self.cellDate).capitalized
+    }
+    
+    private func setActive(isActive: Bool){
+        if isActive { backgroundColor = UIColor(red: 0.92, green: 0.79, blue: 0.33, alpha: 1.00)}
+        else { configureCell() }
     }
 }
 

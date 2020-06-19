@@ -8,14 +8,31 @@
 
 import Foundation
 
+protocol DateFormDelegate {
+    func updateDepartureDate(_ date: Date)
+}
+
 class DateFormViewModel {
     
-    //MARK:- TODO - DONT ALLOW TO SELECT DATE PREVIOUS FROM TODAY
-    
+    typealias updateCompleted = (()->())
+
+    //MARK:- VARIABLES
     var selectedDate: Date?
     let MAX_MONTHS: Int = 24
+    var delegate: DateFormDelegate?
     
-    //NOTE:- WE GET NUMBER OF DAYS FOR THE (INDEX+CURRENT MONTH)
+    
+    func updateDepartureDate(completion: @escaping updateCompleted) {
+        if let departure = selectedDate {
+            delegate?.updateDepartureDate(departure)
+            completion()
+        }
+    }
+    
+    //MARK:- CALENDAR AUX FUNCTIONS TO TABLE
+    /// Returns numbers of day in given month
+    /// - Parameters
+    ///     - index: Distance in months from current month
     func getDays(from index: Int) -> Int {
         let dateComponents = DateComponents(year: getYear(from: index), month: getMonth(from: index))
         let calendar = Calendar.current
@@ -25,7 +42,9 @@ class DateFormViewModel {
         return range.count
     }
     
-    //NOTE:- WE GET NUMBER OF MONTH GIVING AN DISTANCE
+    /// Returns month number distancing an lenght index
+    /// - Parameters
+    ///     - index: Distance in months from current month
     func getMonth(from index: Int) -> Int {
         let currentDate = Date()
         var dateComponent = DateComponents()
@@ -35,7 +54,9 @@ class DateFormViewModel {
         return calendar.component(.month, from: futureDate)
     }
     
-    //NOTE:- WE GET NUMBER OF THE YEAR GIVING A MONTH DISTANCE
+    /// Returns year of a date distancing a given index
+    /// - Parameters
+    ///     - index: Distance in months from current month
     func getYear(from index: Int) -> Int {
         let currentDate = Date()
         var dateComponent = DateComponents()

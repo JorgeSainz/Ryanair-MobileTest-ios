@@ -167,7 +167,6 @@
 			children = (
 				85A1DDE1249B842400F4712B /* FlightDestinationsCell.swift */,
 				85A1DDE6249B8E8900F4712B /* FlightDefaultFormCell.swift */,
-				85C9029E249BD57C004F047B /* CalendarCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 		85C90296249BCC84004F047B /* DateForm */ = {
 			isa = PBXGroup;
 			children = (
+				85DCB46D249CD17E008B39DC /* Outlets */,
 				85C902A0249BDEFF004F047B /* ViewModel */,
 				85C90299249BCC9C004F047B /* View */,
 			);
@@ -348,6 +348,14 @@
 				85D7484E249AA607004AE924 /* ConnectionManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		85DCB46D249CD17E008B39DC /* Outlets */ = {
+			isa = PBXGroup;
+			children = (
+				85C9029E249BD57C004F047B /* CalendarCell.swift */,
+			);
+			path = Outlets;
 			sourceTree = "<group>";
 		};
 		85E98699249BF75700018363 /* PassengersForm */ = {

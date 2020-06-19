@@ -10,7 +10,7 @@ import UIKit
 
 class FlightFormViewController: UIViewController {
     
-    let connection = ConnectionManager()
+    let viewmodel = FlightFormViewModel()
     
     lazy var formTable: UITableView = {
         let table = UITableView()
@@ -31,18 +31,22 @@ class FlightFormViewController: UIViewController {
     }()
     
     lazy var dateCell: FlightDefaultFormCell = {
+        let dateInfo = viewmodel.departureInformation
         let cell = FlightDefaultFormCell()
         cell.selector.descriptionLabel.text = "Ida"
         cell.selector.informationLabel.text = ""
+        cell.selector.valueLabel.setTitle(dateInfo, for: .normal)
         cell.selector.valueLabel.addTarget(self, action: #selector(getDepartureDate), for: .touchUpInside)
         return cell
     }()
     
     lazy var passengersCell: FlightDefaultFormCell = {
+        let passengersInfo = viewmodel.passengersInformation
         let cell = FlightDefaultFormCell()
         cell.selector.descriptionLabel.text = "Pasajeros"
         cell.selector.valueLabel.addTarget(self, action: #selector(getPassengers), for: .touchUpInside)
         cell.selector.informationLabel.text = ""
+        cell.selector.valueLabel.setTitle(passengersInfo, for: .normal)
         return cell
     }()
 
@@ -53,29 +57,25 @@ class FlightFormViewController: UIViewController {
         return button
     }()
     
+    
+    //MARK:- INIT
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupLayout()
-        /*
-        let url = URL(string: "https://tripstest.ryanair.com/api/v4/Availability?origin=DUB&destination=STN&dateout=2020-08-09&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3&adt=1&teen=0&chd=0&roundtrip=false&ToUs=AGREED")!
-        
-        //let url = URL(string: "https://tripstest.ryanair.com/static/stations.json")!
-
-        
-        connection.get(url: url) { (result: Result<Trips,Error>) in
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
-        }
-         */
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshView()
+    }
+    
+    func refreshView(){
+        dateCell.selector.valueLabel.setTitle(viewmodel.departureInformation, for: .normal)
+        passengersCell.selector.valueLabel.setTitle(viewmodel.passengersInformation, for: .normal)
     }
     
     //MARK:- UI ACTIONS
-    
     @objc func getDepartureStation(){
         print("Origin Station")
     }
@@ -87,12 +87,14 @@ class FlightFormViewController: UIViewController {
     @objc func getDepartureDate(){
         print("DepartureDate")
         let dateSelectionModule = DateFormViewController()
+        dateSelectionModule.viewmodel.delegate = viewmodel
         navigationController?.pushViewController(dateSelectionModule, animated: true)
     }
     
     @objc func getPassengers(){
         print("Passengers")
         let passengerSelectionModule = PassengersFormViewController()
+        passengerSelectionModule.viewmodel.delegate = viewmodel
         navigationController?.pushViewController(passengerSelectionModule, animated: true)
     }
 
