@@ -10,14 +10,13 @@ import UIKit
 
 extension PassengersFormViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 { return adultsCell }
         if indexPath.row == 1 { return teensCell }
-        if indexPath.row == 2 { return kidsCell }
-        return babiesCell
+        return kidsCell
     }
     
 }

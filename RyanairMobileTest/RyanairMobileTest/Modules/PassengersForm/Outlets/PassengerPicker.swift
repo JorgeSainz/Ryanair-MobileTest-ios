@@ -8,20 +8,21 @@
 
 import UIKit
 
-protocol PassengerSelectorDelegate {
+protocol PassengerPickerDelegate {
     func showAlertMaxPassengers(_ type: PassengerType)
 }
 
 class PassengerPicker: UIView {
     
-    var totalPassengers: Int = 0 {
+    var delegate: PassengerPickerDelegate?
+    var value: Int = 0 {
         willSet(newValue) { self.passengerLabel.text = "\(newValue)" }
     }
-    
-    var delegate: PassengerSelectorDelegate?
     var passengerType: PassengerType? {
-        willSet(newValue) { if (newValue == .adults) { totalPassengers = 1 } }
+        willSet(newValue) { if (newValue == .adults) { value = 1 } }
     }
+    private let max_value = 6
+    private var min_value: Int { get { return (self.passengerType == .adults ? 1 : 0) } }
     
     //MARK:- OUTLETS
     lazy var restButton: UIButton = {
@@ -84,14 +85,12 @@ class PassengerPicker: UIView {
     
     //MARK:- UI ACTIONS
     @objc func addPassenger(){
-        if totalPassengers < 6 { totalPassengers += 1 }
+        if value < max_value { value += 1 }
         else { delegate?.showAlertMaxPassengers(passengerType ?? .adults) }
     }
     
     @objc func removePassenger(){
-        print(totalPassengers)
-        let minPassengers = passengerType == .adults ? 1 : 0
-        if totalPassengers > minPassengers { totalPassengers -= 1}
+        if value > min_value { value -= 1}
     }
     
     //MARK:- LAYOUT

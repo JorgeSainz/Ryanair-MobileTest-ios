@@ -15,8 +15,7 @@ class FlightDefaultFormCell: UITableViewCell {
         let view = FormField()
         return view
     }()
-    
-    
+
     private lazy var card: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
@@ -27,9 +26,7 @@ class FlightDefaultFormCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    
-    
+
     private lazy var vStackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [self.selector])
         stack.axis = .vertical

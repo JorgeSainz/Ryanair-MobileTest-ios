@@ -60,28 +60,45 @@ class PassengerPickerCell: UITableViewCell {
     }()
 
     //MARK:- INIT
-    init() {
-        super.init(style: .default, reuseIdentifier: "FlightDestinationCell")
+    init(passenger: PassengerType) {
+        super.init(style: .default, reuseIdentifier: "PassengerPickerCell")
         selectionStyle = .none
-        setUpLayout()
+        setupLayout()
+        setupCell(for: passenger)
+        picker.passengerType = passenger
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     //MARK:- LAYOUT
-    private func setUpLayout(){
+    private func setupLayout(){
         selectionStyle = .none
         backgroundColor = .clear
-        setUpStack()
+        setupStack()
     }
     
-    private func setUpStack(){
+    private func setupStack(){
         addSubview(hStackView)
         hStackView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
         hStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
         hStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         hStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+    }
+    
+    private func setupCell(for passsenger: PassengerType){
+        switch passsenger {
+        case .adults:
+            passengerLabel.text = "Adultos"
+            descriptionLabel.text = "Mayores de 16 años"
+        case .teens:
+            passengerLabel.text = "Adolescentes"
+            descriptionLabel.text = "De 12 a 15 años"
+        case .kids:
+            passengerLabel.text = "Niños"
+            descriptionLabel.text = "2-11 años"
+        }
     }
 }

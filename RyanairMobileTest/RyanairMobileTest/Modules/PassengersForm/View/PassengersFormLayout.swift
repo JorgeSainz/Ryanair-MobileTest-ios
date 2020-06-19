@@ -17,7 +17,7 @@ extension PassengersFormViewController {
     }
     
     private func setupAppareace(){
-        navigationItem.title = "Buscar vuelos"
+        navigationItem.title = "Pasajeros"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor(red: 0.09, green: 0.20, blue: 0.54, alpha: 1.00)
         navigationController?.navigationBar.isTranslucent = false
@@ -33,15 +33,15 @@ extension PassengersFormViewController {
         formTable.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 0).isActive = true
         formTable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         formTable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        formTable.bottomAnchor.constraint(equalTo: searchButton.topAnchor, constant: -20).isActive = true
+        formTable.bottomAnchor.constraint(equalTo: saveButton.topAnchor, constant: -20).isActive = true
     }
     
     private func setupButton(){
-        view.addSubview(searchButton)
+        view.addSubview(saveButton)
         //formTable.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 0).isActive = true
-        searchButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        searchButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 0).isActive = true
+        saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        saveButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 0).isActive = true
     }
     
     
