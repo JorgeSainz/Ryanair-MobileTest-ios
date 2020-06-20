@@ -70,26 +70,28 @@ class FlightFormViewController: UIViewController {
     }
     
     func refreshView(){
-        flightCell.departureSelector.valueLabel.setTitle(viewmodel.origin?.name, for: .normal)
-        flightCell.arrivalSelector.valueLabel.setTitle(viewmodel.destiny?.name, for: .normal)
+        if let org = viewmodel.origin { flightCell.setStation(station: org, type: .origin) }
+        if let dest = viewmodel.destiny { flightCell.setStation(station: dest, type: .destination) }
         dateCell.selector.valueLabel.setTitle(viewmodel.departureInformation, for: .normal)
         passengersCell.selector.valueLabel.setTitle(viewmodel.passengersInformation, for: .normal)
     }
     
     //MARK:- UI ACTIONS
     @objc func getDepartureStation(){
-        print("Origin Station")
         let stationSelectionModule = StationFormViewController()
         stationSelectionModule.viewmodel.type = .origin
         stationSelectionModule.viewmodel.delegate = viewmodel
+        stationSelectionModule.viewmodel.selectedStation = viewmodel.origin
+        if let destinyStation = viewmodel.destiny { stationSelectionModule.viewmodel.forbiddenStations = [destinyStation] }
         navigationController?.pushViewController(stationSelectionModule, animated: true)
     }
     
     @objc func getDestinyStation(){
-        print("Departure Station")
         let stationSelectionModule = StationFormViewController()
         stationSelectionModule.viewmodel.type = .destination
         stationSelectionModule.viewmodel.delegate = viewmodel
+        stationSelectionModule.viewmodel.selectedStation = viewmodel.destiny
+        if let originStation = viewmodel.origin { stationSelectionModule.viewmodel.forbiddenStations = [originStation] }
         navigationController?.pushViewController(stationSelectionModule, animated: true)
     }
     

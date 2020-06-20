@@ -39,8 +39,6 @@ class StationFormViewController: UIViewController {
         return button
     }()
     
-    
-    
     //MARK:- INIT
     override func viewDidLoad() {
         super.viewDidLoad()

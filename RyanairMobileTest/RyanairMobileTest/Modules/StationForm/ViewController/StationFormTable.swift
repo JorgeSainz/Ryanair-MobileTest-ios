@@ -15,8 +15,10 @@ extension StationFormViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = StationCell()
-        cell.station = viewmodel.filteredStations[indexPath.row]
-        if viewmodel.selectedStation == cell.station { cell.isSelected = true }
+        let station = viewmodel.filteredStations[indexPath.row]
+        cell.station = station
+        cell.isSelected = (viewmodel.selectedStation == station)
+        cell.isForbidden = viewmodel.forbiddenStations.contains(station)
         return cell
     }
     
@@ -25,7 +27,7 @@ extension StationFormViewController: UITableViewDataSource {
 extension StationFormViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? StationCell {
+        if let cell = tableView.cellForRow(at: indexPath) as? StationCell, cell.isForbidden == false {
             viewmodel.selectedStation = cell.station
             refreshView()
         }

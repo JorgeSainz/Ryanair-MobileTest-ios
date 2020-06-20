@@ -13,19 +13,19 @@ class FlightDestinationsCell: UITableViewCell {
     //MARK:- OUTLETS
     lazy var departureSelector: FormField = {
         let view = FormField()
-        view.informationLabel.text = "MAD"
         view.descriptionLabel.text = "De"
+        view.valueLabel.setTitle("¿Desde dónde vuelas?", for: .normal)
         return view
     }()
     
     lazy var arrivalSelector: FormField = {
         let view = FormField()
-        view.informationLabel.text = ""
         view.descriptionLabel.text = "A"
+        view.valueLabel.setTitle("¿Hacia dónde vuelas?", for: .normal)
         return view
     }()
     
-    lazy var separator: UIView = {
+    private lazy var separator: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15)
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
@@ -65,6 +65,17 @@ class FlightDestinationsCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setStation(station: Station, type: StationType) {
+        if type == .origin {
+            departureSelector.valueLabel.setTitle(station.name, for: .normal)
+            departureSelector.informationLabelValue = station.code
+        }
+        if type == .destination {
+            arrivalSelector.valueLabel.setTitle(station.name, for: .normal)
+            arrivalSelector.informationLabelValue = station.code
+        }
     }
     
     

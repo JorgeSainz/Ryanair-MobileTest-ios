@@ -17,7 +17,12 @@ extension StationFormViewController {
     }
     
     private func setupAppareace(){
-        navigationItem.title = "Seleccione su \("origen")"
+        var destination = ""
+        if let type = viewmodel.type {
+            if type == .origin { destination = "origen" }
+            if type == .destination { destination = "destino" }
+        }
+        navigationItem.title = "Seleccione su \(destination)"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor(red: 0.09, green: 0.20, blue: 0.54, alpha: 1.00)
         navigationController?.navigationBar.isTranslucent = false

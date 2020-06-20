@@ -12,6 +12,7 @@ class StationCell: UITableViewCell {
     
     //MARK:- VARIABLES
     override var isSelected: Bool { didSet(newValue) { setActive(isActive: newValue)} }
+    var isForbidden: Bool = false { willSet(newValue) { setForbidden(newValue) } }
     var station: Station? = nil { willSet(newValue) { updateData(newValue) } }
     
     //MARK:- OUTLETS
@@ -96,11 +97,19 @@ class StationCell: UITableViewCell {
     }
     
     //MARK:- AUX FUNCTIONS
-
-    
     private func setActive(isActive: Bool){
         if isActive { backgroundColor = UIColor(red: 0.92, green: 0.79, blue: 0.33, alpha: 1.00)}
+        else if isForbidden { setForbidden(true) }
         else { backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1) }
+    }
+    
+    private func setForbidden(_ forbidden: Bool){
+        if forbidden == true {
+            cityLabel.textColor = UIColor(red: 0.70, green: 0.75, blue: 0.76, alpha: 1.00)
+            countryLabel.textColor = UIColor(red: 0.70, green: 0.75, blue: 0.76, alpha: 1.00)
+            codeLabel.textColor = UIColor(red: 0.70, green: 0.75, blue: 0.76, alpha: 1.00)
+            backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 1.00, alpha: 1.00)
+        }
     }
     
 }

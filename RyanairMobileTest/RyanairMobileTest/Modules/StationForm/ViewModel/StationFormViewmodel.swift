@@ -24,6 +24,7 @@ class StationFormViewModel {
     var stations: [Station] = []
     var filteredStations: [Station] = []
     var selectedStation: Station?
+    var forbiddenStations: [Station] = []
     
     var delegate: StationFormDelegate?
     var type: StationType?

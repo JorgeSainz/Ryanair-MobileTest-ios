@@ -71,7 +71,7 @@ class CalendarCell: UITableViewCell {
     }
     
     private func configureCell(){
-        if status == .today { backgroundColor = UIColor(red: 0.87, green: 0.90, blue: 0.91, alpha: 1.00) }
+        if status == .today { backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 1.00, alpha: 1.00) }
         if status == .invalid { dateLabel.textColor = UIColor(red: 0.70, green: 0.75, blue: 0.76, alpha: 1.00) }
     }
     
