@@ -24,9 +24,6 @@ class FlightFormViewModel {
     var passengersInformation: String { get { getPassengersInformation() }}
     var canSearchFlights: Bool { get { checkIfCanSearchFlights() }}
     
-    
-    
-    
     //MARK:- AUX FUNCTIONS
     private func checkIfCanSearchFlights() -> Bool{
         return origin != nil && destiny != nil && departureDate != nil && totalPassengers > 0
@@ -43,13 +40,12 @@ class FlightFormViewModel {
     
     private func getPassengersInformation() -> String {
         var information = ""
-        guard let adt = adults, let tn = teens , let kd = kids else { return "Selecciona pasajeros" }
-        if adt > 0 { information += "\(adt) Adulto\(adt > 1 ? "s":"") "  }
-        if tn > 0 { information += ", \(tn) Adolescente\(adt > 1 ? "s":"") "  }
-        if kd > 0 { information += ", \(kd) Niño\(kd > 1 ? "s":"") "  }
+        if adults == nil && teens == nil && kids == nil { return "Selecciona pasajeros" }
+        if let adt = adults, adt > 0 { information += "\(adt) Adulto\(adt > 1 ? "s":"") " }
+        if let tn = teens, tn > 0 { information += ", \(tn) Adolescente\(tn > 1 ? "s":"") " }
+        if let kd = kids, kd > 0 { information += ", \(kd) Niño\(kd > 1 ? "s":"") " }
         return information
     }
-    
 }
 
 
@@ -64,6 +60,13 @@ extension FlightFormViewModel: PassengersFormDelegate {
         self.adults = adults
         self.teens = teens
         self.kids = kids
+    }
+}
+
+extension FlightFormViewModel: StationFormDelegate {
+    func updateStation(_ station: Station, type: StationType) {
+        if type == .origin { origin = station }
+        if type == .destination { destiny = station }
     }
     
     

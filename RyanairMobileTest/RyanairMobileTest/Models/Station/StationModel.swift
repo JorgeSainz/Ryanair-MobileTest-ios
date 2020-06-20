@@ -43,6 +43,10 @@ extension Station {
     }
 }
 
-
-
-
+extension Station: Equatable {
+    static func == (lhs: Station, rhs: Station) -> Bool {
+        return lhs.name == rhs.name && lhs.code == rhs.code
+    }
+    
+    
+}

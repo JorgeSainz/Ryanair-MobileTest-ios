@@ -6,4 +6,32 @@
 //  Copyright © 2020 Jorge Sainz Sueiro. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension StationFormViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewmodel.filteredStations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = StationCell()
+        cell.station = viewmodel.filteredStations[indexPath.row]
+        if viewmodel.selectedStation == cell.station { cell.isSelected = true }
+        return cell
+    }
+    
+}
+
+extension StationFormViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? StationCell {
+            viewmodel.selectedStation = cell.station
+            refreshView()
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+}

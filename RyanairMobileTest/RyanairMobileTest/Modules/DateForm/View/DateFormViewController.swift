@@ -32,6 +32,16 @@ class DateFormViewController: UIViewController {
         return button
     }()
     
+    //MARK:- INIT
+    init(date: Date? = nil){
+        super.init(nibName: nil, bundle: nil)
+        viewmodel.selectedDate = date
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()

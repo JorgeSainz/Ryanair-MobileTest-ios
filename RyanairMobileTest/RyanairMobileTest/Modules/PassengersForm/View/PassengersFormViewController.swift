@@ -53,6 +53,17 @@ class PassengersFormViewController: UIViewController {
     }()
     
     //MARK:- INIT
+    init(adults: Int? = nil, teens: Int? = nil, kids: Int? = nil){
+        super.init(nibName: nil, bundle: nil)
+        adultsCell.picker.value = adults ?? 1
+        teensCell.picker.value = teens ?? 0
+        kidsCell.picker.value = kids ?? 0
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()

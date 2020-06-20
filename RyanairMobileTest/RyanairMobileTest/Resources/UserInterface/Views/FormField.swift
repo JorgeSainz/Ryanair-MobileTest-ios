@@ -11,6 +11,15 @@ import UIKit
 
 class FormField: UIView {
     
+    var informationLabelValue: String = "" {
+        willSet(newValue) {
+            informationLabel.text = newValue
+            if formStack.subviews.contains(informationLabel) == false {
+                formStack.addArrangedSubview(informationLabel)
+            }
+        }
+    }
+    
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "De"
@@ -24,7 +33,7 @@ class FormField: UIView {
     lazy var valueLabel: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("¿Desde donde vuelas?", for: .normal)
-        button.titleLabel?.textAlignment = .left
+        button.contentHorizontalAlignment = .left
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         button.setTitleColor(UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.00), for: .normal)
         return button
@@ -41,10 +50,10 @@ class FormField: UIView {
     }()
     
     private lazy var formStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [self.valueLabel, self.informationLabel])
+        let stack = UIStackView(arrangedSubviews: [self.valueLabel])
         stack.axis = .horizontal
         stack.distribution = .fill
-        stack.alignment = .center
+        stack.alignment = .fill
         stack.spacing = 10
         return stack
     }()

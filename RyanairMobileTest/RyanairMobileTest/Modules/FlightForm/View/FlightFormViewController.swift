@@ -59,7 +59,6 @@ class FlightFormViewController: UIViewController {
     
     
     //MARK:- INIT
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -71,6 +70,8 @@ class FlightFormViewController: UIViewController {
     }
     
     func refreshView(){
+        flightCell.departureSelector.valueLabel.setTitle(viewmodel.origin?.name, for: .normal)
+        flightCell.arrivalSelector.valueLabel.setTitle(viewmodel.destiny?.name, for: .normal)
         dateCell.selector.valueLabel.setTitle(viewmodel.departureInformation, for: .normal)
         passengersCell.selector.valueLabel.setTitle(viewmodel.passengersInformation, for: .normal)
     }
@@ -78,22 +79,28 @@ class FlightFormViewController: UIViewController {
     //MARK:- UI ACTIONS
     @objc func getDepartureStation(){
         print("Origin Station")
+        let stationSelectionModule = StationFormViewController()
+        stationSelectionModule.viewmodel.type = .origin
+        stationSelectionModule.viewmodel.delegate = viewmodel
+        navigationController?.pushViewController(stationSelectionModule, animated: true)
     }
     
     @objc func getDestinyStation(){
         print("Departure Station")
+        let stationSelectionModule = StationFormViewController()
+        stationSelectionModule.viewmodel.type = .destination
+        stationSelectionModule.viewmodel.delegate = viewmodel
+        navigationController?.pushViewController(stationSelectionModule, animated: true)
     }
     
     @objc func getDepartureDate(){
-        print("DepartureDate")
-        let dateSelectionModule = DateFormViewController()
+        let dateSelectionModule = DateFormViewController(date: viewmodel.departureDate)
         dateSelectionModule.viewmodel.delegate = viewmodel
         navigationController?.pushViewController(dateSelectionModule, animated: true)
     }
     
     @objc func getPassengers(){
-        print("Passengers")
-        let passengerSelectionModule = PassengersFormViewController()
+        let passengerSelectionModule = PassengersFormViewController(adults: viewmodel.adults, teens: viewmodel.teens, kids: viewmodel.kids)
         passengerSelectionModule.viewmodel.delegate = viewmodel
         navigationController?.pushViewController(passengerSelectionModule, animated: true)
     }
