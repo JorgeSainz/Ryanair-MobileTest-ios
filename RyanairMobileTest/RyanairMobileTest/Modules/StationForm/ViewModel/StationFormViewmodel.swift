@@ -53,7 +53,7 @@ class StationFormViewModel {
             return
         }
         filteredStations = stations.filter({ (station) -> Bool in
-            return station.name.contains(query) || station.code.contains(query)
+            return station.name.lowercased().contains(query.lowercased()) || station.code.lowercased().contains(query.lowercased())
         })
     }
     

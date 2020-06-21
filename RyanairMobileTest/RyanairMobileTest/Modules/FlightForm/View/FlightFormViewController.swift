@@ -53,6 +53,7 @@ class FlightFormViewController: UIViewController {
     lazy var searchButton: UIButton = {
         let button = PrimaryButton(type: .system)
         button.setTitle("Buscar", for: .normal)
+        button.addTarget(self, action: #selector(searchForFlights), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -61,7 +62,6 @@ class FlightFormViewController: UIViewController {
     //MARK:- INIT
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupLayout()
     }
     
@@ -74,9 +74,32 @@ class FlightFormViewController: UIViewController {
         if let dest = viewmodel.destiny { flightCell.setStation(station: dest, type: .destination) }
         dateCell.selector.valueLabel.setTitle(viewmodel.departureInformation, for: .normal)
         passengersCell.selector.valueLabel.setTitle(viewmodel.passengersInformation, for: .normal)
+        searchButton.isEnabled = viewmodel.canSearchFlights
     }
     
     //MARK:- UI ACTIONS
+    @objc func searchForFlights(){
+        let loading = LoadingAlertView()
+        present(loading, animated: true) {
+            self.viewmodel.searchFlights(completion: { [weak self] (result) in
+                loading.dismiss(animated: true) {
+                    switch result {
+                    case .success(let trips):
+                        self?.navigateToFlightsResults(data: trips)
+                    case .failure(_):
+                        self?.showError()
+                    }
+                }
+            })
+        }
+    }
+    
+    private func navigateToFlightsResults(data: [Trip]){
+        let flightsResultsModule = FlightsResultsViewController()
+        flightsResultsModule.viewmodel.flights = data
+        self.navigationController?.pushViewController(flightsResultsModule, animated: true)
+    }
+    
     @objc func getDepartureStation(){
         let stationSelectionModule = StationFormViewController()
         stationSelectionModule.viewmodel.type = .origin
@@ -107,6 +130,14 @@ class FlightFormViewController: UIViewController {
         navigationController?.pushViewController(passengerSelectionModule, animated: true)
     }
 
+    func showError() {
+        let alert = UIAlertController(title: "Ha ocurrido un error", message: "Hemos tenido un error consultando los vuelos disponibles. Por favor, inténtalo más tarde.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Entendido", style: .default) { (_) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 
 }
 

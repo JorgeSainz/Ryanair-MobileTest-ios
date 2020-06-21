@@ -10,7 +10,10 @@ import Foundation
 
 class FlightFormViewModel {
     
+    typealias handler = ((Result<[Trip], Error>) -> Void)
+    
     //MARK:- VARIABLES
+    private var connection = ConnectionManager()
     var origin: Station?
     var destiny: Station?
     var departureDate: Date?
@@ -24,7 +27,52 @@ class FlightFormViewModel {
     var passengersInformation: String { get { getPassengersInformation() }}
     var canSearchFlights: Bool { get { checkIfCanSearchFlights() }}
     
+    
+    func searchFlights(completion: @escaping handler){
+        let endpoint = configuredFlightsUrl()
+        
+        connection.get(url: endpoint) { (result: Result<Trips,Error>) in
+            switch result {
+            case .success(let trips):
+                DispatchQueue.main.async {
+                    completion(.success(trips.trips ?? []))
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    
     //MARK:- AUX FUNCTIONS
+    private func configuredFlightsUrl() -> URL {
+        let endpoint = URL.Endpoints.flights
+        guard var urlComponents = URLComponents(url: endpoint, resolvingAgainstBaseURL: true) else { return endpoint }
+        
+        let originQuery = URLQueryItem(name: "origin", value: origin?.code)
+        let destinationQuery = URLQueryItem(name: "destination", value: destiny?.code)
+        let dateoutQuery = URLQueryItem(name: "dateout", value: getDepartureQueryDate())
+        let adultsQuery = URLQueryItem(name: "adt", value: "\(adults ?? 0)")
+        let teensQuery = URLQueryItem(name: "teen", value: "\(teens ?? 0)")
+        let childrenQuery = URLQueryItem(name: "chd", value: "\(kids ?? 0)")
+        
+        urlComponents.queryItems = [ originQuery, destinationQuery, dateoutQuery, adultsQuery, teensQuery, childrenQuery ]
+        
+        return urlComponents.url ?? endpoint
+        
+    }
+    
+    private func getDepartureQueryDate() -> String? {
+        if let departure = departureDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            return dateFormatter.string(from: departure).capitalized
+        }
+        return nil
+    }
+    
     private func checkIfCanSearchFlights() -> Bool{
         return origin != nil && destiny != nil && departureDate != nil && totalPassengers > 0
     }
@@ -48,7 +96,7 @@ class FlightFormViewModel {
     }
 }
 
-
+//MARK:- FORM DELEGATES
 extension FlightFormViewModel: DateFormDelegate {
     func updateDepartureDate(_ date: Date) {
         self.departureDate = date
@@ -68,6 +116,4 @@ extension FlightFormViewModel: StationFormDelegate {
         if type == .origin { origin = station }
         if type == .destination { destiny = station }
     }
-    
-    
 }

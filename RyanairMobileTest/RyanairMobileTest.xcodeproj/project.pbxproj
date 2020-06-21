@@ -13,6 +13,13 @@
 		854CD7BF249D185E0008D02A /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7BE249D185E0008D02A /* StationCell.swift */; };
 		854CD7C2249E219A0008D02A /* StationFormViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7C1249E219A0008D02A /* StationFormViewmodel.swift */; };
 		854CD7C5249E23150008D02A /* AppEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7C4249E23150008D02A /* AppEndpoints.swift */; };
+		854CD7C9249E9A1C0008D02A /* LoadingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7C8249E9A1C0008D02A /* LoadingAlertView.swift */; };
+		854CD7CD249EA1CD0008D02A /* FlightsResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7CC249EA1CD0008D02A /* FlightsResultsViewController.swift */; };
+		854CD7CF249EA20B0008D02A /* FlightsResultsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7CE249EA20B0008D02A /* FlightsResultsLayout.swift */; };
+		854CD7D1249EA2E00008D02A /* FlightsResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7D0249EA2E00008D02A /* FlightsResultsTableView.swift */; };
+		854CD7D4249EA3420008D02A /* FlightsResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7D3249EA3420008D02A /* FlightsResultsViewModel.swift */; };
+		854CD7D8249EAA980008D02A /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7D7249EAA980008D02A /* FlightCell.swift */; };
+		854CD7DA249F71DD0008D02A /* FlightCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CD7D9249F71DD0008D02A /* FlightCellViewModel.swift */; };
 		857A1B0A249B93CB0039559A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A1B09249B93CB0039559A /* PrimaryButton.swift */; };
 		857A1B0E249BC2AE0039559A /* FlightFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A1B0D249BC2AE0039559A /* FlightFormViewModel.swift */; };
 		858BEA27249AC2DE005DD06F /* FlightFormLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BEA26249AC2DE005DD06F /* FlightFormLayout.swift */; };
@@ -72,6 +79,13 @@
 		854CD7BE249D185E0008D02A /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		854CD7C1249E219A0008D02A /* StationFormViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationFormViewmodel.swift; sourceTree = "<group>"; };
 		854CD7C4249E23150008D02A /* AppEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEndpoints.swift; sourceTree = "<group>"; };
+		854CD7C8249E9A1C0008D02A /* LoadingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertView.swift; sourceTree = "<group>"; };
+		854CD7CC249EA1CD0008D02A /* FlightsResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResultsViewController.swift; sourceTree = "<group>"; };
+		854CD7CE249EA20B0008D02A /* FlightsResultsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResultsLayout.swift; sourceTree = "<group>"; };
+		854CD7D0249EA2E00008D02A /* FlightsResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResultsTableView.swift; sourceTree = "<group>"; };
+		854CD7D3249EA3420008D02A /* FlightsResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResultsViewModel.swift; sourceTree = "<group>"; };
+		854CD7D7249EAA980008D02A /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		854CD7D9249F71DD0008D02A /* FlightCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellViewModel.swift; sourceTree = "<group>"; };
 		857A1B09249B93CB0039559A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		857A1B0D249BC2AE0039559A /* FlightFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFormViewModel.swift; sourceTree = "<group>"; };
 		858BEA26249AC2DE005DD06F /* FlightFormLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFormLayout.swift; sourceTree = "<group>"; };
@@ -174,6 +188,43 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		854CD7CA249EA1AD0008D02A /* FlightsResults */ = {
+			isa = PBXGroup;
+			children = (
+				854CD7D5249EAA730008D02A /* Outlets */,
+				854CD7D2249EA32F0008D02A /* ViewModel */,
+				854CD7CB249EA1BF0008D02A /* View */,
+			);
+			path = FlightsResults;
+			sourceTree = "<group>";
+		};
+		854CD7CB249EA1BF0008D02A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				854CD7CC249EA1CD0008D02A /* FlightsResultsViewController.swift */,
+				854CD7CE249EA20B0008D02A /* FlightsResultsLayout.swift */,
+				854CD7D0249EA2E00008D02A /* FlightsResultsTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		854CD7D2249EA32F0008D02A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				854CD7D3249EA3420008D02A /* FlightsResultsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		854CD7D5249EAA730008D02A /* Outlets */ = {
+			isa = PBXGroup;
+			children = (
+				854CD7D7249EAA980008D02A /* FlightCell.swift */,
+				854CD7D9249F71DD0008D02A /* FlightCellViewModel.swift */,
+			);
+			path = Outlets;
+			sourceTree = "<group>";
+		};
 		857A1B0B249BC28B0039559A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				85A1DDE4249B87D700F4712B /* FormField.swift */,
+				854CD7C8249E9A1C0008D02A /* LoadingAlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +399,7 @@
 		85D7483D249A879E004AE924 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				854CD7CA249EA1AD0008D02A /* FlightsResults */,
 				854CD7B5249D164C0008D02A /* StationForm */,
 				85E98699249BF75700018363 /* PassengersForm */,
 				85C90296249BCC84004F047B /* DateForm */,
@@ -582,7 +635,11 @@
 				857A1B0E249BC2AE0039559A /* FlightFormViewModel.swift in Sources */,
 				85C902A4249BE619004F047B /* Date+GetDateFrom.swift in Sources */,
 				85A1DDE2249B842400F4712B /* FlightDestinationsCell.swift in Sources */,
+				854CD7DA249F71DD0008D02A /* FlightCellViewModel.swift in Sources */,
+				854CD7CF249EA20B0008D02A /* FlightsResultsLayout.swift in Sources */,
 				85D7484C249A8E63004AE924 /* TripFlightModel.swift in Sources */,
+				854CD7CD249EA1CD0008D02A /* FlightsResultsViewController.swift in Sources */,
+				854CD7D8249EAA980008D02A /* FlightCell.swift in Sources */,
 				85D74847249A8994004AE924 /* StationMarketModel.swift in Sources */,
 				85E986A0249BF7A300018363 /* PassengersFormTableview.swift in Sources */,
 				857A1B0A249B93CB0039559A /* PrimaryButton.swift in Sources */,
@@ -600,8 +657,10 @@
 				85A1DDE7249B8E8900F4712B /* FlightDefaultFormCell.swift in Sources */,
 				854CD7C5249E23150008D02A /* AppEndpoints.swift in Sources */,
 				85D7484A249A8D3A004AE924 /* TripModel.swift in Sources */,
+				854CD7D1249EA2E00008D02A /* FlightsResultsTableView.swift in Sources */,
 				85D7480F249A3849004AE924 /* FlightFormViewController.swift in Sources */,
 				85C9029B249BCCC7004F047B /* DateFormTable.swift in Sources */,
+				854CD7D4249EA3420008D02A /* FlightsResultsViewModel.swift in Sources */,
 				85D7480B249A3849004AE924 /* AppDelegate.swift in Sources */,
 				854CD7B8249D16640008D02A /* StationFormViewController.swift in Sources */,
 				85D7480D249A3849004AE924 /* SceneDelegate.swift in Sources */,
@@ -610,6 +669,7 @@
 				854CD7BC249D175B0008D02A /* StationFormTable.swift in Sources */,
 				858BEA27249AC2DE005DD06F /* FlightFormLayout.swift in Sources */,
 				85E986A7249CB50D00018363 /* PassengersFormViewModel.swift in Sources */,
+				854CD7C9249E9A1C0008D02A /* LoadingAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
